@@ -24,7 +24,7 @@ All four pages share a common filter panel (Date, Continent/Location) and a cons
 
 ## 🖼️ Screenshots
 
-[Global Overview](screenshots/global-overview.png)
+[Global Overview](country-analysis.png.png)
 [Country Analysis](screenshots/country-analysis.png)
 [Vaccination Analysis](screenshots/vaccination-analysis.png)
 [Healthcare & Socioeconomics Analysis](screenshots/healthcare-socioeconomics.png)
