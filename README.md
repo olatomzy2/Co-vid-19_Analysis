@@ -1,106 +1,394 @@
-# COVID-19 Global Impact Dashboard
+# 🌍 COVID-19 Global Impact Dashboard
 
-An interactive **Power BI** dashboard analyzing the global impact of COVID-19 — cases, deaths, vaccinations, healthcare capacity, and socioeconomic context — built on the [Our World in Data](https://ourworldindata.org/covid-deaths) COVID-19 dataset.
+An interactive **Power BI dashboard** exploring the global impact of COVID-19 across **cases, deaths, vaccination, healthcare capacity, and socioeconomic indicators**.
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-217346?style=flat&logo=microsoftexcel&logoColor=white)
+Built using the **Our World in Data COVID-19 dataset**, this project transforms large-scale pandemic data into an interactive analytical report that allows users to explore global trends, compare countries, evaluate vaccination progress, and examine healthcare and socioeconomic context.
 
----
-
-## 📊 Overview
-
-The report is split into four pages, each answering a different question about the pandemic's global impact:
-
-| Page | What it answers |
-|---|---|
-| **Global Overview** | What's the current worldwide picture — total cases, deaths, vaccination progress, and the monthly trend? |
-| **Country Analysis** | How does one country or region compare to others on cases, deaths, and case fatality? |
-| **Vaccination Analysis** | How far has vaccine rollout progressed, and which locations are above/below a coverage target? |
-| **Healthcare & Socioeconomics Analysis** | How do hospital capacity, GDP, and other socioeconomic factors relate to outcomes? |
-
-All four pages share a common filter panel (Date, Continent/Location) and a consistent navigation bar, so any page can be explored independently or used to drill from a global view into a single country.
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat\&logo=powerbi\&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-217346?style=flat\&logo=microsoftexcel\&logoColor=white)
+![Power Query](https://img.shields.io/badge/Power%20Query-742774?style=flat\&logo=microsoft\&logoColor=white)
+![Our World in Data](https://img.shields.io/badge/Data-Our%20World%20in%20Data-blue)
 
 ---
 
-## 🖼️ Screenshots
+## 📌 Project Overview
+
+COVID-19 affected countries differently in terms of infection rates, mortality, vaccination coverage, healthcare capacity, and socioeconomic conditions.
+
+This dashboard was developed to provide a **multi-dimensional view of the pandemic**, allowing users to move from a global perspective into country-level comparisons and deeper analysis of vaccination, healthcare, and socioeconomic indicators.
+
+### The dashboard answers four key questions:
+
+| Dashboard Page                     | Key Question                                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------------------ |
+| 🌍 **Global Overview**             | What does the worldwide COVID-19 picture look like?                                  |
+| 📍 **Country Analysis**            | How do countries compare in terms of cases, deaths, and fatality rates?              |
+| 💉 **Vaccination Analysis**        | How far has vaccination progressed across different locations?                       |
+| 🏥 **Healthcare & Socioeconomics** | How do healthcare capacity and socioeconomic indicators relate to COVID-19 outcomes? |
+
+---
+
+# 📊 Dashboard Preview
+
+## 1. Global Overview
 
 ![Global Overview](co-vid%20pics/global-overview.png.png)
 
+The Global Overview provides a high-level snapshot of COVID-19 activity across the selected date and location filters.
+
+### Key metrics
+
+* Total Cases
+* Total Deaths
+* New Cases
+* New Deaths
+* Total Vaccinations
+* People Vaccinated
+* People Fully Vaccinated
+* Case Fatality Rate
+* Positive Rate Status
+* Full Vaccination Coverage Status
+
+### Visualizations
+
+* Monthly Cases vs. Deaths trend
+* Top 10 locations by total cases
+* Global geographic distribution
+* Interactive filtering by date, continent, and location
+
+---
+
+## 2. Country Analysis
+
 ![Country Analysis](co-vid%20pics/country-analysis.png.png)
+
+The Country Analysis page provides a more detailed comparison of COVID-19 outcomes across individual locations.
+
+### Key metrics
+
+* Population
+* Median Age
+* Human Development Index
+* GDP per Capita
+* Population Density
+* Positive Rate
+* Total Cases
+* Total Deaths
+* Case Fatality Rate
+
+### Visualizations
+
+* New Cases vs. New Deaths trend
+* Cases per Million comparison
+* Country-level comparison table
+* Case Fatality Rate and status
+* Demographic and socioeconomic indicators
+
+---
+
+## 3. Vaccination Analysis
 
 ![Vaccination Analysis](co-vid%20pics/vaccination-analysis.png.png)
 
-![Healthcare & Socioeconomics Analysis](co-vid%20pics/healthcare-socioeconomics.png.png)
+This page focuses on global vaccination rollout and coverage.
+
+### Key metrics
+
+* Total Vaccinations
+* People Vaccinated
+* People Fully Vaccinated
+* New Vaccinations
+* Full Vaccination Coverage Status
+
+### Visualizations
+
+* Vaccination rollout trend
+* People Vaccinated vs. Fully Vaccinated
+* Vaccination coverage gauge
+* Top 10 locations by vaccinations
+* Location-level vaccination coverage table
+
+A **70% full-vaccination benchmark** is used to classify locations as either:
+
+* 🟢 **High — Above 70%**
+* 🔴 **Low — Below 70%**
 
 ---
 
-## 📁 Pages in detail
+## 4. Healthcare & Socioeconomics
 
-### 1. Global Overview
-KPI cards for Total Cases, Total Deaths, New Cases, New Deaths, Vaccinations, People Vaccinated, People Fully Vaccinated, Case Fatality Rate, and two status indicators (Positive Rate Status, Full Vaccination Coverage Status). Below the cards: a monthly Cases-vs-Deaths trend line, a Top 10 locations by cases bar chart, and a world map.
+![Healthcare & Socioeconomics](co-vid%20pics/healthcare-socioeconomics.png.png)
 
-### 2. Country Analysis
-KPI cards plus gauge visuals for Population, Median Age, Human Development Index, GDP per Capita, Population Density, and Positive Rate. A trend chart of New Cases/New Deaths by location and month, a Cases Per Million bar chart, and a sortable country-level table with Case Fatality Rate and Status.
+This page adds healthcare and socioeconomic context to the analysis.
 
-### 3. Vaccination Analysis
-KPI cards for Vaccinations, People Vaccinated, People Fully Vaccinated, Full Vaccination Coverage Status, and New Vaccinations. A rollout trend chart (People Vaccinated vs. Fully Vaccinated over time), a radial gauge tracking coverage against a target, a Top 10 locations by vaccinations bar chart, and a location-level coverage table.
+### Key metrics
 
-### 4. Healthcare & Socioeconomics Analysis
-KPI cards for Hospital Beds per Thousand, ICU Patients, Hospital Patients, Average Reproduction Rate, and GDP per Capita. A monthly ICU/Hospital patients trend, a Hospital Beds per Thousand by continent bar chart, a GDP-per-capita vs. Case Fatality Rate scatter plot, and a continent-level socioeconomic indicators table (diabetes prevalence, cardiovascular death rate, median age).
+* Hospital Beds per Thousand
+* ICU Patients
+* Hospital Patients
+* Average Reproduction Rate
+* GDP per Capita
+
+### Visualizations
+
+* Monthly ICU and hospital patient trends
+* Hospital Beds per Thousand by continent
+* GDP per Capita vs. Case Fatality Rate
+* Continent-level socioeconomic comparison
+
+### Additional indicators
+
+* Diabetes prevalence
+* Cardiovascular death rate
+* Median age
+* GDP per capita
+
+> **Important:** Relationships shown in the dashboard are descriptive and should not be interpreted as evidence of causation.
 
 ---
 
-## 🧮 Key DAX measures
+# 🔎 Analytical Highlights
 
-A few of the core measures behind the report (add the rest of your measures here as the model grows):
+The dashboard enables exploration of several important patterns within the dataset.
+
+### 🌍 Global COVID-19 Impact
+
+Users can examine how cumulative cases and deaths evolved over time and identify locations with the highest reported case volumes.
+
+### 💉 Vaccination Coverage
+
+Vaccination progress varied considerably across locations, allowing users to identify countries above or below the **70% full-vaccination benchmark**.
+
+### 🏥 Healthcare Capacity
+
+Hospital beds, ICU patients, and hospital patients provide additional context for understanding differences in healthcare capacity and pandemic burden.
+
+### 💰 Socioeconomic Context
+
+GDP per capita, human development, population characteristics, diabetes prevalence, and cardiovascular mortality provide additional dimensions for comparing countries and regions.
+
+---
+
+# 🧮 DAX & Data Analysis
+
+The report uses DAX measures to calculate KPIs, ratios, rates, and conditional classifications dynamically based on the selected filters.
+
+### Case Fatality Rate
 
 ```dax
 Case Fatality Rate =
-DIVIDE([Total Deaths], [Total Cases])
-
-Fully Vaccinated Rate % =
-DIVIDE([People Fully Vaccinated], [Population])
-
-Full Vaccination Coverage Status =
-IF([Fully Vaccinated Rate %] > 0.70, "High - Above 70%", "Low - Below 70%")
-
-Positive Rate Status =
-IF([Positive Rate] > 0.05, "High - Above 5%", "Low - At or below 5%")
+DIVIDE(
+    [Total Deaths],
+    [Total Cases]
+)
 ```
 
-> **Note on cumulative fields:** the underlying dataset repeats cumulative figures (e.g. `total_cases`, `people_fully_vaccinated`) and static fields (e.g. `population`) on every daily row. Measures that need a single point-in-time value use `LASTNONBLANK` / `MAX` over `date` rather than a plain `SUM`, so totals reflect the latest available date instead of summing across every row.
+### Fully Vaccinated Rate
+
+```dax
+Fully Vaccinated Rate % =
+DIVIDE(
+    [People Fully Vaccinated],
+    [Population]
+)
+```
+
+### Full Vaccination Coverage Status
+
+```dax
+Full Vaccination Coverage Status =
+IF(
+    [Fully Vaccinated Rate %] > 0.70,
+    "High - Above 70%",
+    "Low - Below 70%"
+)
+```
+
+### Positive Rate Status
+
+```dax
+Positive Rate Status =
+IF(
+    [Positive Rate] > 0.05,
+    "High - Above 5%",
+    "Low - At or below 5%"
+)
+```
 
 ---
 
-## 🗂️ Data source
+# ⚙️ Data Modeling Considerations
 
-- **Dataset:** [Our World in Data — COVID-19 dataset](https://github.com/owid/covid-19-data)
-- **Grain:** one row per location per date
-- **Key fields used:** `location`, `continent`, `date`, `total_cases`, `total_deaths`, `new_cases`, `new_deaths`, `people_vaccinated`, `people_fully_vaccinated`, `total_vaccinations`, `hospital_beds_per_thousand`, `icu_patients`, `hosp_patients`, `gdp_per_capita`, `human_development_index`, `population`, `population_density`, `median_age`, `diabetes_prevalence`, `cardiovasc_death_rate`
+One of the important considerations when working with the dataset is the difference between **daily values, cumulative values, and static country-level attributes**.
 
----
+Cumulative fields such as:
 
-## 🛠️ Tools used
+* `total_cases`
+* `total_deaths`
+* `total_vaccinations`
+* `people_vaccinated`
+* `people_fully_vaccinated`
 
-- **Power BI Desktop** — data modeling, DAX measures, report design
-- **Power Query** — data shaping and transformation
-- **DAX** — calculated measures and conditional status logic
+are repeated across daily records.
 
----
+Simply summing these fields across all dates would therefore produce misleading results.
 
-## 🚀 Getting started
+The report instead uses **latest available date/value logic**, including `LASTNONBLANK` and `MAX` where appropriate, to ensure cumulative metrics represent the selected point in time rather than the sum of repeated historical values.
 
-1. Clone this repository.
-2. Open `Covid-19_Analysis.pbix` in Power BI Desktop.
-3. If prompted, refresh the data source connection.
-4. Explore the four report pages via the navigation bar at the top of each page.
+Static attributes such as population, median age, GDP per capita, and population density are also handled differently from daily measures.
 
 ---
 
-## 👤 Author
+# 🗂️ Dataset
 
-**Emmanuel Tomiwa Agboola**
-Data Analyst | Power BI · SQL · Python
+### Source
 
-- LinkedIn: [linkedin.com/in/emmanueltomiwaagboola](https://www.linkedin.com/in/emmanueltomiwaagboola)
-- GitHub: [github.com/olatomzy2](https://github.com/olatomzy2)
+**Our World in Data — COVID-19 Dataset**
+
+The dataset contains COVID-19 statistics and related demographic, healthcare, and socioeconomic indicators for countries and regions around the world.
+
+### Data grain
+
+**One row per location per date**
+
+### Key fields
+
+#### COVID-19
+
+* `total_cases`
+* `new_cases`
+* `total_deaths`
+* `new_deaths`
+
+#### Vaccination
+
+* `total_vaccinations`
+* `people_vaccinated`
+* `people_fully_vaccinated`
+* `new_vaccinations`
+
+#### Healthcare
+
+* `hospital_beds_per_thousand`
+* `icu_patients`
+* `hosp_patients`
+
+#### Demographics
+
+* `population`
+* `population_density`
+* `median_age`
+
+#### Socioeconomic indicators
+
+* `gdp_per_capita`
+* `human_development_index`
+* `diabetes_prevalence`
+* `cardiovasc_death_rate`
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Technology            | Purpose                                            |
+| --------------------- | -------------------------------------------------- |
+| **Power BI Desktop**  | Dashboard development and visualization            |
+| **Power Query**       | Data cleaning and transformation                   |
+| **DAX**               | Measures, KPIs, calculations and conditional logic |
+| **Our World in Data** | Source dataset                                     |
+
+---
+
+# 📈 Skills Demonstrated
+
+This project demonstrates practical experience in:
+
+* Data cleaning and transformation
+* Power Query
+* Data modeling
+* DAX
+* KPI development
+* Time-series analysis
+* Comparative analysis
+* Geographic visualization
+* Data visualization
+* Conditional logic
+* Interactive dashboard design
+* Data storytelling
+
+---
+
+# 🚀 How to Use
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/olatomzy2/Covid-19-Analysis.git
+```
+
+### 2. Open the Power BI file
+
+Open:
+
+```text
+Covid-19_Analysis.pbix
+```
+
+using **Power BI Desktop**.
+
+### 3. Refresh the dataset
+
+If Power BI prompts you to update or reconnect the data source, follow the prompts to refresh the underlying dataset.
+
+### 4. Explore the dashboard
+
+Use the navigation bar and filters to explore:
+
+**Global Overview → Country Analysis → Vaccination Analysis → Healthcare & Socioeconomics**
+
+---
+
+# 📁 Repository Structure
+
+```text
+Covid-19-Analysis/
+│
+├── Covid-19_Analysis.pbix
+│
+├── co-vid pics/
+│   ├── global-overview.png.png
+│   ├── country-analysis.png.png
+│   ├── vaccination-analysis.png.png
+│   └── healthcare-socioeconomics.png.png
+│
+└── README.md
+```
+
+---
+
+# 👤 Author
+
+## Emmanuel Tomiwa Agboola
+
+**Data Analyst | Power BI · SQL · Python**
+
+🔗 **LinkedIn:**
+https://www.linkedin.com/in/emmanueltomiwaagboola
+
+💻 **GitHub:**
+https://github.com/olatomzy2
+
+---
+
+# 📚 Data Source
+
+**Our World in Data**
+
+COVID-19 Dataset:
+https://github.com/owid/covid-19-data
+
+---
+
+## ⭐ If you found this project useful
+
+Feel free to explore the repository, review the dashboard, and connect with the author on LinkedIn.
